@@ -20,13 +20,13 @@ public class RetrofitClient {
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
                 .create();
 
-        if (retrofit == null){
+        //if (retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(baseUrl)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(client)
                     .build();
-        }
+        //}
 
         return retrofit;
     }

@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/bg_main"
+    android:background="@color/viewfinder_border"
     android:gravity="center"
-    android:padding="10dp"
     android:orientation="vertical"
-    tools:context=".Activity.MainActivity">
+    android:padding="10dp"
+    tools:context=".Activity.CheckActivity">
 
 
-
-    <Button
-        android:id="@+id/btnScanBarcode"
-        android:layout_width="wrap_content"
+    <TextView
+        android:textSize="25dp"
+        android:id="@+id/data"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="scan  QR code" />
+        android:textColor="#FFF"
+        />
 
 </LinearLayout>

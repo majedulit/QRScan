@@ -14,11 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
         android:text="Sign In"
         android:textAlignment="center"
         android:textColor="#FFF"
-        android:textSize="30dp"
-        android:gravity="center_horizontal" />
+        android:textSize="30dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -54,18 +54,31 @@
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint" />
 
-        <!-- Login Button -->
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="fill_parent"
+        <com.andexert.library.RippleView
+            android:id="@+id/more"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@color/btn_login_bg"
-            android:text="@string/btn_login"
-            android:textColor="@color/btn_login" />
+            android:layout_marginTop="20dp">
 
-        <!-- Link to Login Screen -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_login_bg"
+                android:text="@string/btn_login"
+                android:textColor="@color/btn_login" />
+
+        </com.andexert.library.RippleView>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"/>
+
 
         <Button
             android:id="@+id/btnLinkToRegisterScreen"
