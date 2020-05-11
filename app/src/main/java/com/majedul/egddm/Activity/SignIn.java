@@ -2,6 +2,7 @@ package com.majedul.egddm.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.navigation.Navigation;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -105,7 +106,7 @@ public class SignIn extends AppCompatActivity implements Validator.ValidationLis
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         if (settings.getString("logged", "").toString().equals("logged")) {
             dialog.dismiss();
-            startActivity(new Intent(SignIn.this, MainActivity.class));
+            startActivity(new Intent(SignIn.this, NavActivity.class));
             finish();
         }
 
@@ -163,7 +164,7 @@ public class SignIn extends AppCompatActivity implements Validator.ValidationLis
                         editor.putString("access_token", access_token);
                         editor.commit();
                         linlaHeaderProgress.setVisibility(View.VISIBLE);
-                        startActivity(new Intent(SignIn.this, MainActivity.class));
+                        startActivity(new Intent(SignIn.this, NavActivity.class));
                         finish();
 
 
